@@ -1,0 +1,61 @@
+// ===== Helper: tạo/cập nhật quan hệ 1-* (Many-to-one), one-direction, active =====
+void EnsureRel(string factTable, string factCol, string dimTable, string dimCol)
+{
+    if (!Model.Tables.ContainsName(factTable)) { Output($"Skip: missing table {factTable}"); return; }
+    if (!Model.Tables.ContainsName(dimTable))  { Output($"Skip: missing table {dimTable}");  return; }
+
+    var FT = Model.Tables[factTable];
+    var DT = Model.Tables[dimTable];
+
+    if (!FT.Columns.ContainsName(factCol)) { Output($"Skip: {factTable}[{factCol}] missing"); return; }
+    if (!DT.Columns.ContainsName(dimCol))  { Output($"Skip: {dimTable}[{dimCol}] missing");  return; }
+
+    var FC = FT.Columns[factCol];
+    var DC = DT.Columns[dimCol];
+
+    // Tìm quan hệ hiện có đúng cặp cột
+    var existing = Model.Relationships
+        .OfType<SingleColumnRelationship>()
+        .FirstOrDefault(r => r.FromTable == FT && r.FromColumn == FC && r.ToTable == DT && r.ToColumn == DC);
+
+    if (existing == null)
+    {
+        var rel = new SingleColumnRelationship
+        {
+            FromTable = FT,
+            FromColumn = FC,
+            ToTable = DT,
+            ToColumn = DC,
+            Cardinality = RelationshipCardinality.ManyToOne,
+            CrossFilteringBehavior = CrossFilteringBehavior.OneDirection,
+            IsActive = true
+        };
+        Model.Relationships.Add(rel);
+        Output($"Added: {factTable}[{factCol}] -> {dimTable}[{dimCol}]");
+    }
+    else
+    {
+        existing.Cardinality = RelationshipCardinality.ManyToOne;
+        existing.CrossFilteringBehavior = CrossFilteringBehavior.OneDirection;
+        existing.IsActive = true;
+        Output($"Updated: {factTable}[{factCol}] -> {dimTable}[{dimCol}]");
+    }
+}
+
+// ===== Liệt kê các quan hệ (đúng theo mô hình của bạn) =====
+// Fact trung tâm: Financials_Table
+EnsureRel("Financials_Table", "DateID",     "Date_Table",     "DateID");
+EnsureRel("Financials_Table", "ProductID",  "Product_Table",  "ProductID");
+EnsureRel("Financials_Table", "SegmentID",  "Segment_Table",  "SegmentID");
+EnsureRel("Financials_Table", "CountryID",  "Country_Table",  "CountryID");
+EnsureRel("Financials_Table", "DiscountID", "Discount_Table", "DiscountID");
+EnsureRel("Financials_Table", "UnitsID",    "Units_Table",    "UnitsID");
+
+// (Tuỳ chọn) Đánh dấu Date table
+if (Model.Tables.ContainsName("Date_Table") && Model.Tables["Date_Table"].Columns.ContainsName("Date"))
+{
+    var dt = Model.Tables["Date_Table"];
+    dt.IsDateTable = true;
+    dt.DateTableColumn = dt.Columns["Date"] as Column;
+    Output("Marked Date_Table as Date table using column [Date].");
+}
