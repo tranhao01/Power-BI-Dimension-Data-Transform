@@ -5,3 +5,7 @@ In Power BI, Dimension Data Transform refers to the process of cleaning, standar
 <img width="1864" height="724" alt="image" src="https://github.com/user-attachments/assets/2038a035-5aa9-4a15-81ae-47641b9b5149" />
 <img width="440" height="633" alt="image" src="https://github.com/user-attachments/assets/6347a9c0-40c2-4f38-9851-0307c1c3acc8" />
 <img width="456" height="207" alt="image" src="https://github.com/user-attachments/assets/1105c254-8b1f-4049-a3dd-b52d36fa15f8" />
+# Snow Flex
+<img width="597" height="643" alt="image" src="https://github.com/user-attachments/assets/aa3d0b9d-d907-48b0-8594-ce288b3935ce" />
+<img width="1916" height="774" alt="image" src="https://github.com/user-attachments/assets/6e89f8ab-b6df-4272-81f5-ee08c06e7811" />
+
