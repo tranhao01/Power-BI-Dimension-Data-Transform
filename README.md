@@ -8,4 +8,4 @@ In Power BI, Dimension Data Transform refers to the process of cleaning, standar
 # Snow Flex
 <img width="597" height="643" alt="image" src="https://github.com/user-attachments/assets/aa3d0b9d-d907-48b0-8594-ce288b3935ce" />
 <img width="1916" height="774" alt="image" src="https://github.com/user-attachments/assets/6e89f8ab-b6df-4272-81f5-ee08c06e7811" />
-
+<img width="827" height="627" alt="image" src="https://github.com/user-attachments/assets/4206c82e-97c6-4c50-a1f8-80889e518fc6" />
