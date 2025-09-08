@@ -1,4 +1,4 @@
-# Power-BI-Dimension-Data-Transform
+<img width="1344" height="712" alt="image" src="https://github.com/user-attachments/assets/49ddc835-e13b-45e7-a07b-2c8d8772cc4a" /># Power-BI-Dimension-Data-Transform
 In Power BI, Dimension Data Transform refers to the process of cleaning, standardizing, and shaping dimension tables (lookup tables) before loading them into the data model.
 <img width="1003" height="685" alt="image" src="https://github.com/user-attachments/assets/fbf33970-41f9-480e-a2d9-37d6517919e7" />
 <img width="1859" height="654" alt="image" src="https://github.com/user-attachments/assets/da398b9e-79e2-408f-8b9b-33b28ab4d659" />
@@ -9,3 +9,5 @@ In Power BI, Dimension Data Transform refers to the process of cleaning, standar
 <img width="597" height="643" alt="image" src="https://github.com/user-attachments/assets/aa3d0b9d-d907-48b0-8594-ce288b3935ce" />
 <img width="1916" height="774" alt="image" src="https://github.com/user-attachments/assets/6e89f8ab-b6df-4272-81f5-ee08c06e7811" />
 <img width="827" height="627" alt="image" src="https://github.com/user-attachments/assets/4206c82e-97c6-4c50-a1f8-80889e518fc6" />
+# Details Dimension And Slicer
+<img width="1344" height="712" alt="image" src="https://github.com/user-attachments/assets/ab93165a-ca36-41a5-a1b7-d7b8fbec6f6b" />
