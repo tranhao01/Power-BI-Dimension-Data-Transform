@@ -11,3 +11,6 @@ In Power BI, Dimension Data Transform refers to the process of cleaning, standar
 <img width="827" height="627" alt="image" src="https://github.com/user-attachments/assets/4206c82e-97c6-4c50-a1f8-80889e518fc6" />
 # Details Dimension And Slicer
 <img width="1344" height="712" alt="image" src="https://github.com/user-attachments/assets/ab93165a-ca36-41a5-a1b7-d7b8fbec6f6b" />
+<img width="1397" height="707" alt="image" src="https://github.com/user-attachments/assets/9243b1d7-a69f-4d9e-b09b-454f74a6a2ad" />
+<img width="1382" height="707" alt="image" src="https://github.com/user-attachments/assets/799400d0-127c-4125-83cc-41fb620fb515" />
+<img width="1363" height="693" alt="image" src="https://github.com/user-attachments/assets/70c0a689-e4aa-40e3-b7fa-8f5e8487b907" />
